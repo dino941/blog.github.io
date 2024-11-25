@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Yoga & Wellness Blog</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="nav-link" data-title="About Us" data-content="We are a wellness blog dedicated to providing tips, tricks, and resources for a healthy and balanced lifestyle. Our mission is to inspire and empower individuals to achieve physical and mental well-being.">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#" class="nav-link" data-title="Contact Us" data-content="Get in touch with us at contact shukladevesh10@gmail.com or follow us on social media Dev_shukla_10 for more updates. We’d love to hear from you!">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Be Your Own Healer</h2>
+        <p>Discover tips, exercises, and guides for a healthier lifestyle.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-grid" id="blog-grid">
+        <article class="blog-card">
+            <img src="yoga.jpg" alt="Yoga Tips">
+            <h3>Yoga Tips for Beginners</h3>
+            <p>Start your yoga journey with these easy-to-follow tips.</p>
+            <button class="read-more-btn" data-title="Yoga Tips for Beginners" data-content="Learn how to start yoga with easy steps and practical advice for beginners. Yoga can improve flexibility, strength, and mental peace.">Read More</button>
+        </article>
+        <article class="blog-card">
+            <img src="wellness.jpg" alt="Mindful Living">
+            <h3>Mindful Living Essentials</h3>
+            <p>Bring mindfulness into your daily routine for inner peace.</p>
+            <button class="read-more-btn" data-title="Mindful Living Essentials" data-content="Discover simple techniques to incorporate mindfulness into your day-to-day life for better focus and emotional balance.">Read More</button>
+        </article>
+        <article class="blog-card">
+            <img src="nutrition.jpg" alt="Healthy Eating">
+            <h3>Nutrition for a Healthy Life</h3>
+            <p>Explore simple recipes and nutrition tips for a balanced diet.</p>
+            <button class="read-more-btn" data-title="Nutrition for a Healthy Life" data-content="Learn about balanced eating habits, simple recipes, and tips to maintain a healthy diet that complements an active lifestyle.">Read More</button>
+        </article>
+        <article class="blog-card" id="bog-card-1" class="image-preview">
+            <img id="imge" src="" alt="Add image">
+            <h3 id="H3"></h3>
+            <p id="p"></p>
+            <button id="Read" class="read-more-btn" data-title="" data-content="">Read More</button>
+        </article>
+    </section>
+    <div class="butt">
+        <button class="addMore">Add more</button>
+    </div>
+    <div class="addNewBlog" id="addNewBlog">
+        <div class="addBlogPage">
+            <div class="image" class="upload-section">
+                <h1>Upload an Image</h1> 
+                    <label for="imageUpload">Choose an image:</label> 
+                    <input type="file" id="imageUpload" name="imageUpload" accept="image/*">  
+            </div>
+            <h1>Header</h1>
+            <label for="Header">Header of card :</label>
+            <input type="text" id="Header" placeholder="Tell the Header">
+            <h1>Content</h1>
+            <label for="data-cont">Content for Card :</label>
+            <input type="text" id="data-cont" placeholder="Enter the data" >
+            <button id="value">Upload</button>
+        </div>
+    </div>
+    <!-- Modal Popup -->
+    <div class="popup-modal" id="popup-modal">
+        <div class="popup-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <h2 id="popup-title"></h2>
+            <p id="popup-text"></p>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Wellness Blog. All Rights Reserved.</p>
+        <p>By Devesh shukla</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
