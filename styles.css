@@ -1,4 +1,4 @@
-/* General Reset */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
@@ -14,7 +14,6 @@ body {
     margin: 0;
 }
 
-/* Header Section */
 header {
     background-color: #2a2a72;
     color: white;
@@ -53,14 +52,14 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #ffd700;
-    /* transform: font-size(-10px); */
+    
     
     font-size: 30px;
     box-shadow: 0 8px 16px rgb(6, 6, 247,0.2);
     
 }
 
-/* Hero Section */
+
 .hero {
     background: linear-gradient(to bottom, #2a2a72, #009ffd);
     color: white;
@@ -80,7 +79,7 @@ header nav ul li a:hover {
     color: #d9d9d9;
 }
 
-/* Blog Grid Section */
+
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -148,7 +147,7 @@ header nav ul li a:hover {
     background-color: #ffd700;
 }
 
-/* Footer Section */
+
 footer {
     background-color: #2a2a72;
     color: white;
@@ -162,7 +161,7 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Dark Mode */
+
 body.dark-mode {
     background-color: #1c1c1c;
     color: #f0f0f0;
@@ -196,7 +195,7 @@ body.dark-mode .blog-card a:hover {
     color: #333;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .hero h2 {
         font-size: 2.2rem;
@@ -215,16 +214,15 @@ body.dark-mode .blog-card a:hover {
         height: 150px;
     }
 }
-/* Add More Section */
-/* Modal Popup Styles */
+
 .popup-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Transparent dark overlay */
-    display: none; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none; 
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -236,9 +234,9 @@ body.dark-mode .blog-card a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Transparent dark overlay */
+    background-color: rgba(0, 0, 0, 0.9); 
     display: none; 
-    /* Hidden by default */
+    
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -246,7 +244,7 @@ body.dark-mode .blog-card a:hover {
 }
 .popup-content {
     background-color: white;
-    width: 40%; /* Takes 40% of the screen width */
+    width: 40%; 
     height: auto;
     padding: 2rem;
     border-radius: 10px;
@@ -256,7 +254,7 @@ body.dark-mode .blog-card a:hover {
 }
 .addBlogPage{
     background-color: white;
-    width: 40%; /* Takes 40% of the screen width */
+    width: 40%; 
     height: auto;
     padding: 2rem;
     border-radius: 10px;
@@ -284,22 +282,22 @@ body.dark-mode .blog-card a:hover {
     width: 50%;
     border: 2px solid blue;
     margin-bottom: 0.5rem;
-    /* color: #009ffd; */
+    
     padding: 5px;
     margin: 30px;
 }
 .addBlogPage #value{
     width: 30%;
-    /* border: 2px solid blue; */
+    
     background-color:#1f1f6f;
     color: #d9d9d9;
     text-decoration:line-through;
     font-size: 20px;
-    /* text-decoration-color: black; */
+    
     margin-bottom: 0.5rem;
-    /* color: #009ffd; */
+    
     padding: 5px;
-    /* margin: 30px; */
+   
 }
 .addBlogPage #value:hover{
     cursor: pointer;
@@ -312,7 +310,7 @@ body.dark-mode .blog-card a:hover {
     width: 50%;
     border: 2px solid blue;
     margin-bottom: 0.5rem;
-    /* color: #009ffd; */
+  
     padding: 5px;
     margin: 30px;
 }
@@ -345,7 +343,7 @@ body.dark-mode .blog-card a:hover {
     color: #ff0000;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -365,9 +363,9 @@ body.dark-mode .blog-card a:hover {
         opacity: 1;
     }
 }
-/* Read More Button Styling */
+
 .read-more-btn {
-    /* position: abs; */
+   
     display: inline-block;
     background-color: #2a2a72;
     color: white;
