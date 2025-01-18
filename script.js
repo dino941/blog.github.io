@@ -1,7 +1,5 @@
-// script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Create a toggle button for dark mode
     const toggleButton = document.createElement('button');
     toggleButton.textContent = 'Toggle Dark Mode';
     toggleButton.style.position = 'fixed';
@@ -14,18 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleButton.style.color = '#fff';
     toggleButton.style.cursor = 'pointer';
     document.body.appendChild(toggleButton);
-
-    // Toggle dark mode on button click
     toggleButton.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
     });
-
-    // Add More Blogs Logic
     const loadMoreButton = document.getElementById('loadMore');
     const blogGrid = document.getElementById('blog-grid');
 
     loadMoreButton.addEventListener('click', () => {
-        // Mock data for additional blogs
         const newBlogs = [
             {
                 img: 'meditation.jpg',
@@ -46,8 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 link: '#'
             }
         ];
-
-        // Create new blog cards
         newBlogs.forEach(blog => {
             const bogCard = document.createElement('article');
             bogCard.classList.add('blog-card');
@@ -59,8 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             blogGrid.appendChild(bogCard);
         });
-
-        // Optionally hide the button after adding more blogs
         loadMoreButton.style.display = 'none';
     });
 });
@@ -70,8 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('popup-title');
     const modalText = document.getElementById('popup-text');
     const closeModalButton = document.getElementById('close-modal');
-
-    // Show Modal on "Read More" Button Click
     readMoreButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             const title = button.getAttribute('data-title');
@@ -83,13 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = 'flex'; // Show the modal
         });
     });
-
-    // Close Modal on "Close" Button Click
     closeModalButton.addEventListener('click', () => {
         modal.style.display = 'none'; // Hide the modal
     });
-
-    // Close Modal when clicking outside of the popup
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
@@ -102,8 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('popup-title');
     const modalText = document.getElementById('popup-text');
     const closeModalButton = document.getElementById('close-modal');
-
-    // Show Modal on Button/Link Click
     popupButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault(); // Prevent default link behavior
@@ -116,13 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = 'flex'; // Show the modal
         });
     });
-
-    // Close Modal on "Close" Button Click
     closeModalButton.addEventListener('click', () => {
         modal.style.display = 'none'; // Hide the modal
     });
-
-    // Close Modal when clicking outside of the popup
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
@@ -134,25 +111,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupButtons = document.querySelectorAll('.addMore');
     const modal = document.getElementById('addNewBlog');
 
-    // Show Modal on Button/Link Click
     popupButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default link behavior
-            // const title = button.getAttribute('data-title');
-            // const content = button.getAttribute('data-content');
-
-            // modalTitle.textContent = title;
-            // modalText.textContent = content;
-
-            modal.style.display = 'flex'; // Show the modal
+            e.preventDefault();
+            modal.style.display = 'flex';
         });
     });
 
     value.addEventListener('click', () => {
         console.log(value)
-        modal.style.display = 'none'; // Hide the modal
+        modal.style.display = 'none';
     });
-    // Close Modal when clicking outside of the popup
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
@@ -160,11 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 document.addEventListener('DOMContentLoaded', () => {
-    const value = document.querySelectorAll('#value'); // All buttons with ID "value"
-    const dataCont = document.getElementById('data-cont'); // Input for content
-    const Header = document.getElementById('Header'); // Input for header
-    const imageupload = document.getElementById('imageUpload'); // File input for image
-    const bogCard = document.getElementById('bog-card-1'); // Blog card container
+    const value = document.querySelectorAll('#value'); 
+    const dataCont = document.getElementById('data-cont'); 
+    const Header = document.getElementById('Header'); 
+    const imageupload = document.getElementById('imageUpload'); 
+    const bogCard = document.getElementById('bog-card-1'); 
     const read=document.getElementById('Read');
 
     console.log(value);
@@ -172,31 +141,29 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(imageupload);
     console.log(Header);
 
-    // Show Modal on Button/Link Click
+ 
     value.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             console.log(Header);
 
-            // Retrieve content from input fields
-            const x = dataCont.value; // Get the value of the content input
-            const h = Header.value;  // Get the value of the header input
-
-            const file = imageupload.files[0]; // Get the uploaded file
+           
+            const x = dataCont.value;
+            const h = Header.value;  
+            const file = imageupload.files[0]; 
 
             // Handle image upload
             if (file) {
                 const reader = new FileReader();
 
-                // Load the file and display it as an image
                 reader.onload = () => {
                     document.getElementById('imge').src=reader.result;
-                    // bogCard.innerHTML = `<img src=""${reader.result} alt="Uploaded Image" />`;
+                
                 };
 
-                reader.readAsDataURL(file); // Read the file as a Data URL (base64)
+                reader.readAsDataURL(file);
             }
-            // Update the blog card with text content
+           
             const h3Element = document.getElementById('H3');
             const pElement = document.getElementById('p');
             
@@ -204,11 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
             pElement.innerHTML=x;
             read.dataset.title=h;
             read.dataset.content=x;
-            // Show the blog card with updated content
+      
             bogCard.style.display = 'flex';
         });
     });
-    // Close Modal when clicking ou
+
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
